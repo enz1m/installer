@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <title>Installer</title>
+  <defs>
+    <filter id="enz-installer-drop" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dy="2" result="blur"/>
+      <feComponentTransfer in="blur" result="shadow">
+        <feFuncA type="linear" slope="0.28"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- portrait keyline; stick 68 x 78 at (30 12), plug 40 x 28 (y 84..112) with two windows, lanyard slot;
+       arrow shaft 14 wide, head 40 wide, tip (64 76), rounded with a 4 px round-joined stroke -->
+  <g filter="url(#enz-installer-drop)">
+    <rect x="44" y="84" width="40" height="28" rx="3" fill="#E6ECF4"/>
+    <rect x="30" y="12" width="68" height="78" rx="9" fill="#6B7380"/>
+  </g>
+  <g fill="#B9C3D3">
+    <rect x="52" y="97" width="8" height="7" rx="1.5"/>
+    <rect x="68" y="97" width="8" height="7" rx="1.5"/>
+  </g>
+  <rect x="55" y="19" width="18" height="6" rx="3" fill="#4A505C"/>
+  <path d="M57 34 Q57 32 59 32 H69 Q71 32 71 34 V52 H84 L64 76 L44 52 H57 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
+</svg>
